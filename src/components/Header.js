@@ -8,16 +8,10 @@ class Header extends React.Component {
     console.log(this.props);
     return (
       <header>
-        <div>
-          <div>
-            <p>Total de despesas:</p>
-            <p data-testid="total-field">0</p>
-            <p data-testid="header-currency-field">BRL</p>
-          </div>
-          <div>
-            <p data-testid="email-field">{ email }</p>
-          </div>
-        </div>
+        <p>Total de despesas:</p>
+        <p data-testid="total-field">0</p>
+        <p data-testid="header-currency-field">BRL</p>
+        <p data-testid="email-field">{ email }</p>
       </header>
     );
   }
