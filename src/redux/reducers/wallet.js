@@ -1,4 +1,4 @@
-import { SUCCESS_API, ERROR_API } from '../actions';
+import { SUCCESS_API, ERROR_API, SAVE_EXPENSE } from '../actions';
 
 // Esse reducer será responsável por tratar o todas as informações relacionadas as despesas
 const INITIAL_STATE = {
@@ -20,6 +20,11 @@ const walletReducer = (state = INITIAL_STATE, action) => {
     return {
       ...state,
       error: action.error,
+    };
+  case SAVE_EXPENSE:
+    return {
+      ...state,
+      expenses: [...state.expenses, action.expense],
     };
   default:
     return state;
