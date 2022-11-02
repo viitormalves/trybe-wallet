@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 class Header extends React.Component {
-  sumTotalExpenses = () => {
+  sumTotalExpenses = () => { // está função lê todos os expenses, faz um map para calcular o gasto em BRL e por fim soma na varável result com 2 casas decimais após a vírula;
     const { expenses } = this.props;
     const sumExpenses = expenses.map((expense) => (Number(expense.value)
       * Number(expense.exchangeRates[expense.currency].ask)));

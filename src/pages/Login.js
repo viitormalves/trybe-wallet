@@ -72,10 +72,6 @@ class Login extends React.Component {
   }
 }
 
-// const mapStateToProps = (state) => ({
-//   email: state.userReducer,
-// });
-
 Login.propTypes = {
   dispatch: PropTypes.func,
   push: PropTypes.func,
