@@ -53,71 +53,73 @@ class WalletForm extends Component {
     const { currencies } = this.props;
     return (
       <form>
-        <label htmlFor="description">
-          Descrição da despesa
-          <input
-            data-testid="description-input"
-            id="description"
-            type="text"
-            value={ description }
-            onChange={ this.handleChange }
-          />
-        </label>
-        <label htmlFor="tag">
-          Categoria da Despesa
-          <select
-            data-testid="tag-input"
-            id="tag"
-            name="tag"
-            value={ tag }
-            onChange={ this.handleChange }
-          >
-            <option selected>Alimentação</option>
-            <option>Lazer</option>
-            <option>Trabalho</option>
-            <option>Transporte</option>
-            <option>Saúde</option>
-          </select>
-        </label>
-        <label htmlFor="value">
-          Valor
-          <input
-            data-testid="value-input"
-            id="value"
-            type="number"
-            value={ value }
-            onChange={ this.handleChange }
-          />
-        </label>
-        <label htmlFor="method">
-          <select
-            data-testid="method-input"
-            name="method"
-            id="method"
-            value={ method }
-            onChange={ this.handleChange }
-          >
-            <option selected>Dinheiro</option>
-            <option>Cartão de crédito</option>
-            <option>Cartão de débito</option>
-          </select>
-        </label>
-        <label htmlFor="currency">
-          Moeda
-          <select
-            data-testid="currency-input"
-            name="currency"
-            id="currency"
-            value={ currency }
-            onChange={ this.handleChange }
-          >
-            {
-              currencies.map((c) => (
-                <option key={ c }>{ c }</option>
-              ))
-            }
-          </select>
-        </label>
+        <div>
+          <label htmlFor="description">
+            Descrição da despesa
+            <input
+              data-testid="description-input"
+              id="description"
+              type="text"
+              value={ description }
+              onChange={ this.handleChange }
+            />
+          </label>
+          <label htmlFor="tag">
+            Categoria da Despesa
+            <select
+              data-testid="tag-input"
+              id="tag"
+              name="tag"
+              value={ tag }
+              onChange={ this.handleChange }
+            >
+              <option selected>Alimentação</option>
+              <option>Lazer</option>
+              <option>Trabalho</option>
+              <option>Transporte</option>
+              <option>Saúde</option>
+            </select>
+          </label>
+          <label htmlFor="value">
+            Valor
+            <input
+              data-testid="value-input"
+              id="value"
+              type="number"
+              value={ value }
+              onChange={ this.handleChange }
+            />
+          </label>
+          <label htmlFor="method">
+            <select
+              data-testid="method-input"
+              name="method"
+              id="method"
+              value={ method }
+              onChange={ this.handleChange }
+            >
+              <option selected>Dinheiro</option>
+              <option>Cartão de crédito</option>
+              <option>Cartão de débito</option>
+            </select>
+          </label>
+          <label htmlFor="currency">
+            Moeda
+            <select
+              data-testid="currency-input"
+              name="currency"
+              id="currency"
+              value={ currency }
+              onChange={ this.handleChange }
+            >
+              {
+                currencies.map((c) => (
+                  <option key={ c }>{ c }</option>
+                ))
+              }
+            </select>
+          </label>
+        </div>
         <button
           type="button"
           onClick={ this.clickSaveExpenses }
