@@ -22,7 +22,7 @@ class Header extends React.Component {
         <p
           data-testid="total-field"
         >
-          { expenses.length > 0 ? this.sumTotalExpenses() : 0.00 }
+          { expenses.length > 0 ? this.sumTotalExpenses() : '0.00' }
         </p>
         <p data-testid="header-currency-field">BRL</p>
         <p data-testid="email-field">{ email }</p>

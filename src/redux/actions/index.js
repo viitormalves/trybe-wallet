@@ -50,8 +50,8 @@ export const thunkSaveExpense = (expense) => async (dispatch) => {
   }
 };
 
-// export const sumExpense = (expense) => {
-//   const valor = expense.value;
-//   const moeda = expense.currencies;
-//   const testa = expense.exchangeRates.moeda.ask
-// }
+export const DELETE_EXPENSE = 'DELETE_EXPENSE';
+export const deleteExpense = (expenses) => ({
+  type: DELETE_EXPENSE,
+  expenses,
+});

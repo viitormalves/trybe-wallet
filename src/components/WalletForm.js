@@ -27,9 +27,9 @@ class WalletForm extends Component {
 
   clickSaveExpenses = () => {
     const { description, tag, method, currency, value } = this.state;
-    const { expenses } = this.props;
+    const { count } = this.props;
     const expense = {
-      id: (expenses.length),
+      id: count,
       value,
       currency,
       method,
@@ -136,12 +136,14 @@ const mapStateToProps = (state) => ({
   expenses: state.wallet.expenses,
   editor: state.wallet.editor,
   idToEdit: state.wallet.idToEdit,
+  count: state.wallet.count,
 });
 
 WalletForm.propTypes = {
   dispatch: PropTypes.func,
   currencies: PropTypes.arrayOf(PropTypes.shape({})),
   expenses: PropTypes.arrayOf(PropTypes.shape({})),
+  count: PropTypes.number,
 }.isRequired;
 
 export default connect(mapStateToProps)(WalletForm);
