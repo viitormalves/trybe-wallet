@@ -1,4 +1,6 @@
-import { SUCCESS_API, ERROR_API, SAVE_EXPENSE, DELETE_EXPENSE } from '../actions';
+import {
+  SUCCESS_API, ERROR_API, SAVE_EXPENSE, DELETE_EXPENSE, EDIT_EXPENSE, SAVE_EDIT_EXPENSE,
+} from '../actions';
 
 // Esse reducer será responsável por tratar o todas as informações relacionadas as despesas
 const INITIAL_STATE = {
@@ -32,6 +34,18 @@ const walletReducer = (state = INITIAL_STATE, action) => {
     return {
       ...state,
       expenses: action.expenses,
+    };
+  case EDIT_EXPENSE:
+    return {
+      ...state,
+      idToEdit: action.idToEdit,
+      editor: action.editor,
+    };
+  case SAVE_EDIT_EXPENSE:
+    return {
+      ...state,
+      expenses: [...action.expenses],
+      editor: action.editor,
     };
   default:
     return state;

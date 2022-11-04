@@ -55,3 +55,17 @@ export const deleteExpense = (expenses) => ({
   type: DELETE_EXPENSE,
   expenses,
 });
+
+export const EDIT_EXPENSE = 'EDIT_EXPENSE';
+export const editExpense = (expenseId) => ({
+  type: EDIT_EXPENSE,
+  idToEdit: expenseId,
+  editor: true,
+});
+
+export const SAVE_EDIT_EXPENSE = 'SAVE_EDIT_EXPENSE';
+export const saveEditExpense = (expenses) => ({
+  type: SAVE_EDIT_EXPENSE,
+  expenses,
+  editor: false,
+});
