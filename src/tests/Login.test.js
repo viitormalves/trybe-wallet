@@ -21,7 +21,7 @@ describe('Testar página de Login', () => {
     expect(pathname).toBe('/');
   });
   it('Testar se os campos de e-mail e senha seguem o formato válido para ativar o botão de "Entrar"', () => {
-    renderWithRouterAndRedux(<App />);
+    const { history } = renderWithRouterAndRedux(<App />);
 
     const emailInput = screen.getByPlaceholderText('E-mail');
     userEvent.type(emailInput, 'teste@gmail.com');
