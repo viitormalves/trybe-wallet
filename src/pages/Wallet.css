@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700&display=swap') ;
+
+.header-container {
+  align-items: center;
+  background-color: white;
+  box-shadow: -4px 9px 13px rgba(5, 18, 54, 0.4);
+  display: flex;
+  height: 150px;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1050px;
+}
+
+.div-flex {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: max-content;
+}
+
+img {
+  margin-right: 10px;
+}
+
+p {
+  color: #003be5;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+  margin-right: 10px;
+}
+
+label {
+  align-items: center;
+  color: #003be5;
+  display: flex;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  justify-content: space-around;
+  line-height: 14px;
+  margin: 15px;
+}
+
+.email {
+  color: #2fc18c;
+}
+
+.form-container2 {
+  align-items: center;
+  background: rgb(194, 195, 197);
+  box-shadow: -4px 9px 13px rgba(5, 18, 54, 0.4);
+  display: flex;
+  flex-wrap: wrap;
+  height: 150px;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1050px;
+}
+
+.input-wallet {
+  background: white;
+  border: 1px solid #003be5;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #003be5;
+  display: block;
+  height: 30px;
+  margin: 5px;
+  text-align: center;
+  width: 288.86px;
+}
+
+.input-wallet:focus {
+  border: 1px solid #003be5;
+  color: #003be5;
+  outline-color: #003be5;
+}
+
+
+.input-wallet2 {
+  background: white;
+  border: 1px solid #003be5;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #003be5;
+  display: block;
+  height: 30px;
+  margin: 5px;
+  text-align: center;
+  width: 155px;
+}
+
+.input-wallet2:focus {
+  border: 1px solid #003be5;
+  color: #003be5;
+  outline-color: #003be5;
+}
+
+.input-wallet3 {
+  background: white;
+  border: 1px solid #003be5;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #003be5;
+  display: block;
+  height: 30px;
+  margin: 5px;
+  text-align: center;
+  width: 91px;
+}
+
+.input-wallet3:focus {
+  border: 1px solid #003be5;
+  color: #003be5;
+  outline-color: #003be5;
+}
+
+.div-button {
+  align-items: center;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: -4px 9px 13px rgba(5, 18, 54, 0.4);
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1050px;
+}
+
+.button-add {
+  background: #2fc18c;
+  border: 1px solid #2fc18c;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  height: 40px;
+  line-height: 14px;
+  text-align: center;
+  width: 330px;
+}
+
+table {
+  background: #0039e59f;
+  border-radius: 10px;
+  box-shadow: -4px 9px 13px rgba(104, 104, 104, 0.3);
+  height: 464px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 1155px;
+}
+
+.tr-head {
+  align-items: center;
+  color: white;
+  display: flex;
+  margin-top: 20px;
+  font-family: 'Epilogue';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  justify-content: space-around;
+  line-height: 13px;
+  text-align: center;
+}
+
+.tr-body {
+  align-items: center;
+  color: white;
+  display: flex;
+  margin-top: 20px;
+  font-family: 'Epilogue';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  justify-content: space-around;
+  line-height: 13px;
+  text-align: center;
+}
+
+td , th {
+  width: 150px;
+}
+
+.button-edit {
+  background: url('../Images/editar.png');
+  background-repeat: no-repeat;
+  border: none;
+  height: 20px;
+  margin: 5px;
+  width: 20px;
+}
+
+.button-delete {
+  background: url('../Images/excluir.png');
+  background-repeat: no-repeat;
+  border: none;
+  height: 20px;
+  margin: 5px;
+  width: 20px;
+}

@@ -34,7 +34,7 @@ describe('Testa a página Wallet e seus componentes', () => {
     const textBRL = screen.getByText('BRL');
     expect(textBRL).toBeInTheDocument();
   });
-  it('Testa se adiciona uma despesa ao preencher os campos e clicar em adicionar', () => {
+  it('Testa se adiciona uma despesa ao preencher os campos e clicar em adicionar', async () => {
     const INITIAL_STATE_MOCK = {
       wallet: {
         currencies: [
@@ -84,6 +84,8 @@ describe('Testa a página Wallet e seus componentes', () => {
 
     const buttonAdd = screen.getByRole('button', { name: 'Adicionar despesa' });
     userEvent.click(buttonAdd);
+
+    // const acaiDescription = await screen.findByText('Açaí');
   });
   it('Testa se as despesas adicionadas são excluídas e editadas quando clicados nos respectivos botões', () => {
     const INITIAL_STATE_MOCK = {

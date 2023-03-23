@@ -53,10 +53,11 @@ class WalletForm extends Component {
     const { currencies } = this.props;
     return (
       <form>
-        <div>
+        <div className="form-container2">
           <label htmlFor="description">
             Descrição da despesa
             <input
+              className="input-wallet"
               data-testid="description-input"
               id="description"
               type="text"
@@ -67,6 +68,7 @@ class WalletForm extends Component {
           <label htmlFor="tag">
             Categoria da Despesa
             <select
+              className="input-wallet2"
               data-testid="tag-input"
               id="tag"
               name="tag"
@@ -83,6 +85,7 @@ class WalletForm extends Component {
           <label htmlFor="value">
             Valor
             <input
+              className="input-wallet2"
               data-testid="value-input"
               id="value"
               type="number"
@@ -91,7 +94,9 @@ class WalletForm extends Component {
             />
           </label>
           <label htmlFor="method">
+            Método de Pagamento
             <select
+              className="input-wallet2"
               data-testid="method-input"
               name="method"
               id="method"
@@ -106,6 +111,7 @@ class WalletForm extends Component {
           <label htmlFor="currency">
             Moeda
             <select
+              className="input-wallet3"
               data-testid="currency-input"
               name="currency"
               id="currency"
@@ -120,12 +126,15 @@ class WalletForm extends Component {
             </select>
           </label>
         </div>
-        <button
-          type="button"
-          onClick={ this.clickSaveExpenses }
-        >
-          Adicionar despesa
-        </button>
+        <div className="div-button">
+          <button
+            className="button-add"
+            type="button"
+            onClick={ this.clickSaveExpenses }
+          >
+            Adicionar despesa
+          </button>
+        </div>
       </form>
     );
   }

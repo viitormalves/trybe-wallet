@@ -13,7 +13,6 @@ class Table extends Component {
   onClickEdit = (expenseId) => {
     const { dispatch } = this.props;
     dispatch(editExpense(expenseId));
-    // dispatch() para colocar como true e mandar o id
   };
 
   render() {
@@ -21,7 +20,7 @@ class Table extends Component {
     return (
       <table>
         <thead>
-          <tr>
+          <tr className="tr-head">
             <th>Descrição</th>
             <th>Tag</th>
             <th>Método de pagamento</th>
@@ -36,7 +35,7 @@ class Table extends Component {
         <tbody>
           {
             expenses.map((expense) => (
-              <tr key={ expense.id }>
+              <tr key={ expense.id } className="tr-body">
                 <td>{ expense.description }</td>
                 <td>{expense.tag}</td>
                 <td>{expense.method}</td>
@@ -54,18 +53,20 @@ class Table extends Component {
                 <td>Real</td>
                 <td>
                   <button
+                    className="button-edit"
                     type="button"
                     data-testid="edit-btn"
                     onClick={ () => this.onClickEdit(expense.id) }
                   >
-                    Editar
+                    {/* Editar */}
                   </button>
                   <button
+                    className="button-delete"
                     type="button"
                     data-testid="delete-btn"
                     onClick={ () => this.onClickDelete(expense.id) }
                   >
-                    Excluir
+                    {/* Excluir */}
                   </button>
                 </td>
               </tr>
